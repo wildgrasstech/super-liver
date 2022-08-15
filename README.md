@@ -1,5 +1,5 @@
 # super-liver
-安卓全平台保活  android keep running
+安卓全平台保活  android keep running  demo可体验测试保活效果
 
 ## 什么是安卓保活
 
