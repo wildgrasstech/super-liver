@@ -51,6 +51,6 @@ adb shell ps -ef |grep com.miqt.demo
 其中 com.miqt.demo是demo app包名，将其替换为需要测试的app包名。如果force-stop进程消失则说明app无法在系统回收后拉起。根据我们测试结果，市场上98%以上app无法在android9及以上保活
 
 
-## 联系作者体验
+## 联系作者
 
 vx : backdoorng
