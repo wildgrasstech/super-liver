@@ -22,7 +22,7 @@
 添加依赖：
 
 ```
-implementation 'com.team.cleaner:keepalive:1.0.1'
+implementation 'mypackagename:keepalive:1.0.1'
 
 ```
 
