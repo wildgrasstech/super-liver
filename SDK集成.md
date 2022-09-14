@@ -45,3 +45,20 @@ public class App extends Application {
 ```
 
 完成接入
+
+### SDK 引用的第三方库
+以下是SDK内部引用的一些第三方工具类库，如果有冲突可联系调整
+dependencies {
+  implementation 'com.android.support:support-annotations:28.0.0' 
+  implementation 'com.blankj:utilcodex:1.31.0' 
+  implementation 'com.google.code.gson:gson:2.9.0' 
+  implementation 'commons-io:commons-io:2.11.0' 
+}
+
+### SDK Android 权限
+以下是SDK 内部一些功能需要用到的权限
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" android:maxSdkVersion="22" /> 
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> 
+<uses-permission android:name="android.permission.REORDER_TASKS" /> 
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" /> 
+<uses-permission android:name="android.permission.INTERNET" />
