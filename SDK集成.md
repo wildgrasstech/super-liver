@@ -22,7 +22,7 @@
 添加依赖：
 
 ```
-implementation 'mypackagename:keepalive:1.0.1'
+implementation '当前应用包名:keepalive_ng:1.0.3'
 
 ```
 
