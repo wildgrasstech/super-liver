@@ -53,4 +53,4 @@ adb shell ps -ef |grep com.miqt.demo
 
 ## 联系
 
-vx : backdoorng
+vx : huolinmufeng
