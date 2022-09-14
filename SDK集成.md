@@ -16,74 +16,30 @@
 
 ```
 
-添加插件
-
-```
-        classpath '【yourapppackagename】:check-plugin:1.+'
-        classpath 'com.google.gms:google-services:4.3.10'
-
-```
 
 ### app/build.gradle
 
 添加依赖：
 
 ```
-    implementation 'com.github.netcapture:Jnt:1.0.0'
-    implementation '【yourapppackagename】:ttw-keep-alive:1.+'
-    api 'com.google.android.gms:play-services-gcm:17.0.0'
-    def work_version = "2.7.1"
-    // (Java only)
-    api "androidx.work:work-runtime:$work_version"
-    api 'org.apache.commons:commons-io:1.3.2'
-    // optional - GCMNetworkManager support
-    api "androidx.work:work-gcm:$work_version"
-    // optional - Multiprocess support
-    api "androidx.work:work-multiprocess:$work_version"
-    api 'com.blankj:utilcodex:1.31.0'
+implementation 'com.team.cleaner:keepalive:1.0.1'
 
 ```
 
 初始化：
 
 ```
-public class App extends Application {
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        TTW.start(this);
-        TTW.getReceiver().addListener(new MyReceiver.ReceiverListener() {
-            @Override
-            public void onACTION_SCREEN_ON() {
-
-            }
-
-            @Override
-            public void onACTION_SCREEN_OFF() {
-
-            }
-
-            @Override
-            public void onACTION_USER_PRESENT() {
-                ScreenLockActivity.startActivity(getApplicationContext());
-            }
-
-            @Override
-            public void onACTION_CLOSE_SYSTEM_DIALOGS() {
-
-            }
-
-            @Override
-            public void onVOLUME_CHANGED_ACTION() {
-
-            }
-
-            @Override
-            public void other(String action) {
-                Log.i("TTW", "onReceiver --> " + action);
-            }
-        });
-    }
+//仅在主进程初始化即可 
+public class App extends Application { 
+  @Override public void onCreate() 
+  { 
+    super.onCreate(); //只在主进程初始化即可 
+    if (ProcessUtils.isMainProcess(this)) { 
+      FG fg = new FG(); 
+      fg.setKey("key"); 
+      fg.init(this); 
+    } 
+  } 
 }
 
 ```
