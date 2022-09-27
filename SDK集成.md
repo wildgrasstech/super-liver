@@ -6,13 +6,13 @@
 添加仓库
 
 ```
- maven {
-            credentials {
-                username '621344be8af5d39eb3f17f3e'
-                password 'AEFqUjoF0Tzm'
-            }
-            url '<https://packages.aliyun.com/maven/repository/2190199-release-52iISc/>'
-        }
+maven {
+   credentials {
+      username '621344be8af5d39eb3f17f3e'
+      password '(ijI1DwR7[wG'
+   }
+   url 'https://packages.aliyun.com/maven/repository/2279663-release-AiyNZM/'
+}
 
 ```
 
