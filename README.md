@@ -42,10 +42,10 @@ super-live适用于工具app，游戏app，内容类(小说漫画音乐视频直
 
 ```bash
 # 先forcestop(系统回收进程)
-adb shell am force-stop com.miqt.demo  
+adb shell am force-stop 包名
 
 # 查看app是否继续存活
-adb shell ps -ef |grep com.miqt.demo
+adb shell ps -ef |grep 包名
 ```
 
 其中 com.miqt.demo是demo app包名，将其替换为需要测试的app包名。如果force-stop进程消失则说明app无法在系统回收后拉起。根据我们测试结果，市场上98%以上app无法在android9及以上保活
